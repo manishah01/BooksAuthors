@@ -1,0 +1,113 @@
+* {
+    margin:0px;
+    padding:0px;
+    font-family:'Cutive Mono', monospace;
+}
+
+#wrapper {
+    padding:10px;
+    margin:0 auto;
+    width:850px;
+    background-color: rgb(189, 185, 185);
+    border:1px solid rgb(0, 0, 0);
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    background-color: rgb(65, 64, 64);
+    border:1px solid rgb(255, 255, 255);
+}
+
+h3{
+    background-color: rgb(121, 119, 119);
+    border:1px dotted rgb(0, 0, 0);
+    font-size: 25px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+table {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    width:100%;
+}
+
+table, th, td{
+    background-color: rgb(255, 255, 255);
+    border:1px dotted rgb(0, 0, 0);
+}
+
+th{
+    color:white;
+    background-color: rgb(121, 119, 119);
+}
+
+th, td{
+    padding:10px;
+}
+
+form{
+    background-color: rgb(255, 255, 255);
+    padding:15px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border:1px solid rgb(45, 43, 43);
+}
+
+button{
+    margin-top: 10px;
+    display: block;
+}
+
+#add_book{
+    height:30px;
+    width: 300px;
+}
+
+#description, #notes {
+    height:100px;
+    width:500px;
+}
+
+
+a{
+    text-decoration: none;
+    color:black
+}
+
+img{
+    height:150px;
+    width:150px;
+    margin-left: 345px;
+}
+
+.info {
+    padding:10px;
+    border:1px solid rgb(45, 43, 43);
+    margin-bottom: 10px;
+}
+
+.info h1{
+    margin-bottom: 10px;
+    border:1px solid rgb(45, 43, 43);
+}
+
+.info h3{
+    margin-bottom: 5px;
+}
+
+h1{ 
+    border:1px solid rgb(45, 43, 43);
+    background-color: white;
+}
+
+#special{
+    background-color: rgb(238, 238, 238);
+    border:1px dotted rgb(24, 24, 24);
+}
+
+select{
+    padding:20px;
+}
+

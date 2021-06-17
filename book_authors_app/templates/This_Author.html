@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'BA.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Author</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div class='info'>
+            <h1>Author Information </h1>
+            <h3>Author ID:</h3> {{author.id}}
+            <h3>Author Name: </h3>{{author.first_name}} {{author.last_name}}
+            <h3>Books:</h3>
+                {% for book in author.books.all %}
+                {{book.title}},
+            {% endfor %}
+
+            <form action="/author_info/{{author.id}}/add" method="post" id="special">
+                <h3> Add Book to Author </h3>
+                {% csrf_token %} 
+                <select name='each_book'>
+                    {% for book in books %}
+                    <option value="{{book.id}}">{{book.title}}</option>
+                    {% endfor %}
+                </select>
+                <button>submit</button>
+            </form>
+        </div>
+        <p><a href="/authors">Back to Authors Page</a></p>
+    </div>
+</body>
+</html>

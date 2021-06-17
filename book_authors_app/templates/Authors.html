@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'BA.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authors</title>
+</head>
+<body>
+    <div id='wrapper'>
+        <h1>Authors Page</h1>
+        <img src="{% static 'images/author.png' %}" />
+        <h2>Add Author</h2>
+        <form action="add_author" method="post">
+            {% csrf_token %} 
+                <h4>Author's First Name</h4>
+                <input type="text" id="first_name" name="first_name">
+
+                <h4> Author's Last Name</h4>
+                <input type="text" id="last_name" name="last_name">
+
+                <h4>Notes</h4>
+                <input type="text" id="notes" name="notes">
+    
+                <button>Add Author</button>
+            
+            </form>
+        <h2>All Authors</h2>
+        <table>
+            <thead>
+                <th>Author ID</th>
+                <th>Author Name</th>
+                <th>Notes</th>
+                <th>Author Information</th>
+            </thead>
+            <tbody>
+                {% for author in all_authors %}
+                <tr>
+                    <td>{{author.id}}
+                        <a href="/delete_author/{{author.id}}">Delete</a>
+                    </td>
+                    <td>{{author.first_name}} {{author.last_name}}</td>
+                    <td>{{author.notes}}</td>
+                    <td><a href="/author_info/{{author.id}}">View Page</a></td>
+                {% endfor %}
+                </tr>
+            </tbody>
+        </table>
+        <p><a href="/">Home Page</a></p>
+    
+    
+    
+    </div>
+
+
+    </div>
+</body>
+</html>
